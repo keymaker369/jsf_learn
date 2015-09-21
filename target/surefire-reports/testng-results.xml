@@ -1,0 +1,14 @@
+<testng-results>
+  <reporter-output>
+  </reporter-output>
+  <suite name="com.cometoin.HelloWorldTest">
+    <groups>
+    </groups>
+    <test name="Command line test">
+      <class name="com.cometoin.HelloWorldTest">
+        <test-method status="PASS" signature="testGetText()" name="testGetText" duration-ms="3" started-at="2015-05-11T09:54:15Z" finished-at="2015-05-11T09:54:15Z">
+        </test-method>
+      </class>
+    </test>
+  </suite>
+</testng-results>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:t="http://myfaces.apache.org/tomahawk"
+	xmlns:p="http://primefaces.org/ui"
+	template="/WEB-INF/templates/default.xhtml">
+	<ui:define name="content">
+		<br />
+		<a href="home.jsf">Go to home</a>
+		<br />
+		<a href="http://stackoverflow.com/questions/25339056/understanding-process-and-update-attributes-of-primefaces">http://stackoverflow.com/questions/25339056/understanding-process-and-update-attributes-of-primefaces</a>
+
+		<h:form>
+			<h2>Test 01</h2>
+			<h4>primefaces process and update</h4>
+			<h:panelGrid columns="2">
+				<h:outputLabel for="som" value="1/2"/>
+				<t:selectOneMenu id="som" value="#{test01Bean.userId}">
+		            <f:selectItem itemValue="#{1}" itemLabel="One"/>
+		            <f:selectItem itemValue="#{2}" itemLabel="Two"/>
+		            <p:ajax update="@form" listener="#{test01Bean.oneTwoChange()}" process="@form" />
+		        </t:selectOneMenu>
+				<h:outputLabel for="userid" value="Userid:"/>
+				<h:outputText id="userid" value="#{test01Bean.userId}"/>
+			</h:panelGrid>
+		</h:form>
+	</ui:define>
+</ui:composition>
